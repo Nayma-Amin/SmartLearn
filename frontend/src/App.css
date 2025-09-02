@@ -1,42 +1,133 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+html, body, #root {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
   text-align: center;
+  font-family: Arial, sans-serif;
+  background: radial-gradient(circle, #232424, #161515);
 }
 
-.logo {
+.landing-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.landing-box .logo {
   height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+  margin-bottom: 20px;
 }
+
+.login-box .logo,
+.signup-box .logo {
+  height: 3.5em;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
 .logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+  filter: drop-shadow(0 0 2em #e564ffaa);
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.login-box h1,
+.signup-box h1 {
+  margin-top: 5px;
+  margin-bottom: 15px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.login-box h4,
+.signup-box h4 {
+  margin: 0;
+  line-height: 0;
 }
 
-.card {
-  padding: 2em;
+.login-box input,
+.signup-box input {
+  width: 300px;
+  padding: 10px;
+  margin: 8px 0;
+  font-size: 16px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
 }
 
-.read-the-docs {
+.action-button {
+  width: 200px;
+  height: 45px;
+  font-size: 16px;
+  font-weight: bold;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  background-color: #000;
+  color: white;
+  cursor: pointer;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+  margin: 8px 0;
+}
+.action-button:hover {
+  border: 2px solid #e564ff;
+  box-shadow: 0 0 8px #e564ff;
+  background-color: #000;
+}
+
+.google-button {
+  width: 200px;
+  height: 45px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  background-color: #000000;
+  color: #444;
+  cursor: pointer;
+  margin: 8px 0;
+  transition: box-shadow 0.3s ease;
+}
+.google-button:hover {
+  box-shadow: 0 0 8px #e564ff;
+}
+
+.button-group {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.password-wrapper {
+  position: relative;
+  width: 300px;
+  margin: 8px auto;
+}
+
+.password-wrapper input {
+  width: 100%;
+  padding: 10px;
+  padding-right: 40px;
+  font-size: 16px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  display: block;
+}
+
+.eye-icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  user-select: none;
+  font-size: 18px;
   color: #888;
+}
+.eye-icon:hover {
+  color: #e564ff;
 }
