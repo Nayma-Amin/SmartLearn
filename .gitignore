@@ -8,5 +8,8 @@ __pycache__/
 # Environment variables
 .env
 
+# Firebase config (if you want to ignore)
+frontend/src/firebase.js
+
 # OS files
 .DS_Store
